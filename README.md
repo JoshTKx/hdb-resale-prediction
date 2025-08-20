@@ -97,9 +97,9 @@ tqdm>=4.62.0
    - Mount Google Drive for data access
 
 2. **Run Notebooks in Order**
-   - Start with `HDB_resale_analysis.ipynb` [![Open Analysis](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yourusername/hdb-resale-prediction/blob/main/notebooks/HDB_resale_analysis.ipynb) for data exploration 
-   - Continue with `HDB_resale_preprocessing.ipynb` [![Open Preprocessing](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yourusername/hdb-resale-prediction/blob/main/notebooks/HDB_resale_preprocessing.ipynb) for feature engineering
-   - Finish with `HDB_resale_model.ipynb` [![Open Model Training](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yourusername/hdb-resale-prediction/blob/main/notebooks/HDB_resale_model.ipynb) for model training
+   - Start with `HDB_resale_analysis.ipynb` [![Open Analysis](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JoshTKx/hdb-resale-prediction/blob/main/notebooks/HDB_resale_analysis.ipynb) for data exploration 
+   - Continue with `HDB_resale_preprocessing.ipynb` [![Open Preprocessing](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JoshTKx/hdb-resale-prediction/blob/main/notebooks/HDB_resale_preprocessing.ipynb) for feature engineering
+   - Finish with `HDB_resale_model.ipynb` [![Open Model Training](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JoshTKx/hdb-resale-prediction/blob/main/notebooks/HDB_resale_model.ipynb) for model training
 
 3. **Data Setup**
    - Upload HDB dataset to Google Drive

@@ -88,11 +88,11 @@ This project builds a production-ready neural network to predict HDB resale pric
 
 ## Requirements
 `
-torch>=1.9.0
-pandas>=1.3.0
-numpy>=1.21.0
-scikit-learn>=1.0.0
-matplotlib>=3.4.0
+torch>=1.9.0\n
+pandas>=1.3.0\n
+numpy>=1.21.0\n
+scikit-learn>=1.0.0\n
+matplotlib>=3.4.0\n
 tqdm>=4.62.0
 `
 

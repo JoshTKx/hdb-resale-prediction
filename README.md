@@ -104,7 +104,7 @@ tqdm>=4.62.0
    - Mount Google Drive for data access
 
 2. **Run Notebooks in Order**
-   - Start with `HDB_resale_analysis.ipynb` for data exploration   [![Open Analysis](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JoshTKx/hdb-resale-prediction/blob/main/notebooks/HDB_resale_analysis.ipynb) 
+   - Start with `HDB_resale_data_exploration.ipynb` for data exploration   [![Open Analysis](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JoshTKx/hdb-resale-prediction/blob/main/notebooks/HDB_resale_data_exploration.ipynb) 
    - Continue with `HDB_resale_preprocessing.ipynb` for feature engineering [![Open Preprocessing](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JoshTKx/hdb-resale-prediction/blob/main/notebooks/HDB_resale_preprocessing.ipynb) 
    - Finish with `HDB_resale_model.ipynb` for model training [![Open Model Training](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JoshTKx/hdb-resale-prediction/blob/main/notebooks/HDB_resale_model.ipynb) 
 

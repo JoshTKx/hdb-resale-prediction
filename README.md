@@ -44,14 +44,21 @@ This project builds a production-ready neural network to predict HDB resale pric
 - **Regularization**: Early stopping + L2 weight decay
 - **Batch Size**: 512 for optimal GPU utilization
 
+
 ## Model Performance
 
 | Metric | Value | Industry Benchmark |
 |--------|-------|-------------------|
-| **R² Score** | 0.900 | > 0.85 (Excellent) |
-| **RMSE** | $59,000 | ~10-12% of avg price |
-| **MAPE** | 8.0% | < 10% (Very Good) |
-| **MAE** | $45,000 | Competitive |
+| **R² Score** | 0.905 | > 0.85 (Excellent) |
+| **RMSE** | $58,230 | ~10-12% of avg price |
+| **MAPE** | 7.51% | < 10% (Very Good) |
+| **MAE** | $44,448 | Competitive |
+
+**Training Details:**
+- Total Epochs: 75 (early stopped)
+- Best Validation: MAPE 6.21%, R² 0.921
+- Training Time: ~12 minutes (Tesla T4 GPU)
+- Parameters: 17,495 (efficient architecture)
 
 ## Project Structure
 
@@ -97,9 +104,9 @@ tqdm>=4.62.0
    - Mount Google Drive for data access
 
 2. **Run Notebooks in Order**
-   - Start with `HDB_resale_analysis.ipynb` [![Open Analysis](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JoshTKx/hdb-resale-prediction/blob/main/notebooks/HDB_resale_analysis.ipynb) for data exploration 
-   - Continue with `HDB_resale_preprocessing.ipynb` [![Open Preprocessing](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JoshTKx/hdb-resale-prediction/blob/main/notebooks/HDB_resale_preprocessing.ipynb) for feature engineering
-   - Finish with `HDB_resale_model.ipynb` [![Open Model Training](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JoshTKx/hdb-resale-prediction/blob/main/notebooks/HDB_resale_model.ipynb) for model training
+   - Start with `HDB_resale_analysis.ipynb` for data exploration   [![Open Analysis](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JoshTKx/hdb-resale-prediction/blob/main/notebooks/HDB_resale_analysis.ipynb) 
+   - Continue with `HDB_resale_preprocessing.ipynb` for feature engineering [![Open Preprocessing](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JoshTKx/hdb-resale-prediction/blob/main/notebooks/HDB_resale_preprocessing.ipynb) 
+   - Finish with `HDB_resale_model.ipynb` for model training [![Open Model Training](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JoshTKx/hdb-resale-prediction/blob/main/notebooks/HDB_resale_model.ipynb) 
 
 3. **Data Setup**
    - Upload HDB dataset to Google Drive

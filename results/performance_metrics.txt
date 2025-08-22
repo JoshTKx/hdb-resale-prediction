@@ -43,7 +43,7 @@ Test Set Performance (Final Evaluation):
 Training Details:
 ================
 - Total Epochs: 60 (early stopped)
-- Best Validation Loss: Epoch 60 ($49,634 RMSE)
+- Best Validation Loss: Epoch 60 (~$48,860 RMSE)
 - Training Time: ~12 minutes (Tesla T4 GPU)
 - Memory Usage: CUDA GPU optimization
 - Learning Rate Schedule: 0.01 → 0.005

@@ -1,0 +1,8 @@
+model:
+  embedding_dims: [15, 6, 10, 12]
+  hidden_layers: [128, 64, 32]
+  dropout: 0.2
+training:
+  batch_size: 512
+  learning_rate: 0.01
+  epochs: 100

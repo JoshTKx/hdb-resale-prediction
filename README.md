@@ -144,10 +144,10 @@ tqdm>=4.62.0
 
 ## Development Environment
 
-**Platform**: Google Colab Pro (recommended for GPU access)
-**Runtime**: Python 3.x with GPU acceleration
-**Storage**: Google Drive for persistent data storage
-**Dependencies**: Automatically installed via pip in notebook cells
+- **Platform**: Google Colab Pro (recommended for GPU access)
+- **Runtime**: Python 3.x with GPU acceleration
+- **Storage**: Google Drive for persistent data storage
+- **Dependencies**: Automatically installed via pip in notebook cells
 
 ## License
 

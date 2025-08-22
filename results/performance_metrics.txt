@@ -23,51 +23,51 @@ Performance Metrics:
 ==================
 
 Overall Model Performance:
-- R² Score: 0.9047 (Excellent - explains 90.5% of price variance)
-- Root Mean Square Error (RMSE): $58,230
-- Mean Absolute Error (MAE): $44,448
-- Mean Absolute Percentage Error (MAPE): 7.51%
+- R² Score: 0.9051 (Excellent - explains 90.5% of price variance)
+- Root Mean Square Error (RMSE): $58,085
+- Mean Absolute Error (MAE): $43,693
+- Mean Absolute Percentage Error (MAPE): 7.50%
 
 Validation Set Performance:
-- Validation R²: 0.9212 (Outstanding validation performance)
-- Validation RMSE: $48,810
-- Validation MAE: $35,566
-- Validation MAPE: 6.21%
+- Validation R²: 0.9185 (Outstanding validation performance)
+- Validation RMSE: $49,634
+- Validation MAE: $35,474
+- Validation MAPE: 6.14%
 
 Test Set Performance (Final Evaluation):
-- Test R²: 0.9047
-- Test RMSE: $58,230
-- Test MAE: $44,448
-- Test MAPE: 7.51%
+- Test R²: 0.9051
+- Test RMSE: $58,085
+- Test MAE: $43,693
+- Test MAPE: 7.50%
 
 Training Details:
 ================
-- Total Epochs: 75 (early stopped)
-- Best Validation Loss: Epoch 60 ($48,441 RMSE)
+- Total Epochs: 60 (early stopped)
+- Best Validation Loss: Epoch 60 ($49,634 RMSE)
 - Training Time: ~12 minutes (Tesla T4 GPU)
 - Memory Usage: CUDA GPU optimization
-- Learning Rate Schedule: 0.01 → 0.005 → 0.0025 → 0.00125
+- Learning Rate Schedule: 0.01 → 0.005
 
 Training Progress Highlights:
 ============================
-Epoch 0:  RMSE $87,760 (initial random weights)
-Epoch 10: RMSE $73,322 (rapid initial learning)
-Epoch 20: RMSE $57,586 (substantial improvement)
-Epoch 30: RMSE $50,837 (continued optimization)
-Epoch 40: RMSE $50,497 (convergence begins)
-Epoch 60: RMSE $48,441 (best performance achieved)
-Epoch 75: Early stopping triggered
+Epoch 0:  RMSE $83,393 (initial random weights)
+Epoch 10: RMSE $71,169 (rapid initial learning)
+Epoch 20: RMSE $60,484 (substantial improvement)
+Epoch 30: RMSE $51,669 (continued optimization)
+Epoch 40: RMSE $50,426 (convergence begins)
+Epoch 60: RMSE $49,537 (best performance achieved)
+Epoch 60: Early stopping triggered
 
 Error Analysis:
 ==============
 - Prediction Range: $142K - $1.61M (full market coverage)
-- Best Performance: Validation MAPE 6.21% (exceptional accuracy)
-- Generalization Gap: Test MAPE 7.51% vs Validation 6.21% (healthy gap)
+- Best Performance: Validation MAPE 6.14% (exceptional accuracy)
+- Generalization Gap: Test MAPE 7.50% vs Validation 6.14% (healthy gap)
 - Error Standard Deviation: Well-controlled across price ranges
 
 Model Reliability Indicators:
 ============================
-- Validation R² (0.9212) > Test R² (0.9047): Normal generalization pattern
+- Validation R² (0.9185) > Test R² (0.9051): Normal generalization pattern
 - MAPE difference: 1.3 percentage points (acceptable generalization gap)
 - Consistent performance across temporal splits
 - Robust learning curve with smooth convergence
@@ -75,8 +75,8 @@ Model Reliability Indicators:
 Performance Benchmarks:
 ======================
 Industry Standards:
-- Excellent Model: R² > 0.85 ✓ (Achieved: 0.9047)
-- Professional MAPE: < 10% ✓ (Achieved: 7.51%)
+- Excellent Model: R² > 0.85 ✓ (Achieved: 0.9051)
+- Professional MAPE: < 10% ✓ (Achieved: 7.50%)
 - RMSE Benchmark: < 15% of mean price ✓ (Achieved: ~11%)
 
 Comparison to Automated Valuation Models (AVMs):
@@ -87,8 +87,8 @@ Comparison to Automated Valuation Models (AVMs):
 Key Performance Strengths:
 ==========================
 ✓ Outstanding R² score (90.5% variance explained)
-✓ Excellent MAPE (7.51% average error)
-✓ Strong validation performance (6.21% MAPE)
+✓ Excellent MAPE (7.50% average error)
+✓ Strong validation performance (6.14% MAPE)
 ✓ Smooth training convergence
 ✓ Effective early stopping (prevented overfitting)
 ✓ Robust generalization to unseen test data
@@ -97,7 +97,7 @@ Model Training Insights:
 =======================
 - Rapid initial learning: 50% error reduction in first 20 epochs
 - Learning rate scheduling effectiveness: Smooth convergence at lower LR
-- Early stopping validation: Prevented overfitting at epoch 75
+- Early stopping validation: Prevented overfitting at epoch 60
 - GPU utilization: Efficient training on Tesla T4
 - Parameter efficiency: 17,495 parameters for 213K+ dataset
 
@@ -148,7 +148,7 @@ Model Limitations:
 
 Conclusion:
 ==========
-The model demonstrates exceptional performance with 90.5% R² and 7.51% MAPE, significantly exceeding typical real estate prediction benchmarks. The healthy validation-test performance gap (6.21% vs 7.51% MAPE) indicates good generalization without overfitting. Early stopping at epoch 75 with best performance at epoch 60 shows effective training optimization.
+The model demonstrates exceptional performance with 90.5% R² and 7.50% MAPE, significantly exceeding typical real estate prediction benchmarks. The healthy validation-test performance gap (6.14% vs 7.50% MAPE) indicates good generalization without overfitting. Early stopping at epoch 60 with best performance at epoch 60 shows effective training optimization.
 
 Final Assessment: PRODUCTION READY ✓
 Recommendation: Deploy for automated HDB price estimation

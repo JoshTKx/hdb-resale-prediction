@@ -50,13 +50,13 @@ This project builds a production-ready neural network to predict HDB resale pric
 | Metric | Value | Industry Benchmark |
 |--------|-------|-------------------|
 | **R² Score** | 0.905 | > 0.85 (Excellent) |
-| **RMSE** | $58,230 | ~10-12% of avg price |
-| **MAPE** | 7.51% | < 10% (Very Good) |
-| **MAE** | $44,448 | Competitive |
+| **RMSE** | $58,085 | ~10-12% of avg price |
+| **MAPE** | 7.50% | < 10% (Very Good) |
+| **MAE** | $43,693 | Competitive |
 
 **Training Details:**
-- Total Epochs: 75 (early stopped)
-- Best Validation: MAPE 6.21%, R² 0.921
+- Total Epochs: 60 (early stopped)
+- Best Validation: MAPE 6.14%, R² 0.9185
 - Training Time: ~12 minutes (Tesla T4 GPU)
 - Parameters: 17,495 (efficient architecture)
 

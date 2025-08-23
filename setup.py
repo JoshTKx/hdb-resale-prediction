@@ -10,6 +10,7 @@ setup(
         "numpy>=1.21.0",
         "scikit-learn>=1.0.0",
         "matplotlib>=3.4.0",
-        "tqdm>=4.62.0"
+        "tqdm>=4.62.0",
+        "pytest>=6.2.0"
     ]
 )

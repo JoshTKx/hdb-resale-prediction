@@ -149,6 +149,29 @@ tqdm>=4.62.0
 - **Storage**: Google Drive for persistent data storage
 - **Dependencies**: Automatically installed via pip in notebook cells
 
+## Future Enhancements
+
+### Planned Improvements
+- **Enhanced Dataset**: Expand training data with additional years and external factors (economic indicators, policy changes)
+- **Geospatial Features**: Integrate MRT distance, school proximity, and amenity accessibility data
+- **Advanced Architectures**: Experiment with transformer-based models and attention mechanisms
+- **Model Ensemble**: Combine multiple model predictions for improved accuracy
+- **Real-time Deployment**: Deploy as REST API for live price predictions
+
+### Recommendation Engine Development
+- **Property Matching**: Recommend similar properties based on user preferences
+- **Investment Analysis**: Identify undervalued properties with high appreciation potential
+- **Market Timing**: Predict optimal buying/selling periods based on market cycles
+- **Portfolio Optimization**: Help investors diversify across different HDB segments
+
+### Technical Roadmap
+- **MLOps Pipeline**: Implement continuous training and model monitoring
+- **Model Interpretability**: SHAP analysis for feature importance and model explanations
+- **Performance Optimization**: Model quantization and inference acceleration
+- **Data Drift Detection**: Monitor model performance degradation over time
+
+*Timeline: Features planned for implementation over the next 6-12 months*
+
 ## License
 
 MIT License - see LICENSE file for details.

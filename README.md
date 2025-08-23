@@ -1,5 +1,6 @@
 # hdb-resale-prediction
 Deep learning model predicting Singapore HDB resale prices with 90% accuracy
+https://drive.google.com/drive/folders/1TcsTT94sg8325QZXNl8BfAhdNKQ9W3_k?usp=sharing 
 
 # Singapore HDB Resale Price Prediction
 

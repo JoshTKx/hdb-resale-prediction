@@ -291,3 +291,55 @@ print(f"- Price range: ${df_sample['resale_price'].min():,.0f} to ${df_sample['r
 print(f"- Time period: {df_sample['month'].min()} to {df_sample['month'].max()}")
 print(f"- Towns: {df_sample['town'].nunique()} unique ({', '.join(sorted(df_sample['town'].unique())[:5])}...)")
 print(f"- Flat types: {df_sample['flat_type'].nunique()} unique")
+
+
+
+print("\n" + "="*50)
+print("SAVING PREPROCESSING PARAMETERS FOR INFERENCE")
+print("="*50)
+
+# 1. Save scaler parameters
+scaler_params = {}
+continuous_feature_names = ['remaining_lease_months', 'floor_area_sqm', 'year', 'month_num', 'building_age']
+
+for i, feature in enumerate(continuous_feature_names):
+    scaler_params[feature] = {
+        'mean': float(scaler.mean_[i]),
+        'std': float(scaler.scale_[i])
+    }
+
+print("Scaler parameters:")
+for feature, params in scaler_params.items():
+    print(f"  {feature}: mean={params['mean']:.2f}, std={params['std']:.2f}")
+
+# 2. Save encoder mappings
+encoder_mappings = {}
+for feature in categorical_features:
+    classes = encoders[feature].classes_
+    encoder_mappings[feature] = {str(cls): int(idx) for idx, cls in enumerate(classes)}
+
+print(f"\nEncoder mappings created for {len(encoder_mappings)} categorical features:")
+for feature, mapping in encoder_mappings.items():
+    print(f"  {feature}: {len(mapping)} categories (0 to {len(mapping)-1})")
+
+# 3. Save to files
+import json
+params_dir = '/content/drive/My Drive/HDB_resale_project/preprocessed_data/'
+
+with open(f'{params_dir}scaler_params.json', 'w') as f:
+    json.dump(scaler_params, f, indent=2)
+
+with open(f'{params_dir}encoder_mappings.json', 'w') as f:
+    json.dump(encoder_mappings, f, indent=2)
+
+print(f"\nParameters saved to:")
+print(f"  - {params_dir}scaler_params.json")
+print(f"  - {params_dir}encoder_mappings.json")
+
+# 4. Display actual town mappings for verification
+print(f"\nActual town mappings (first 10):")
+town_mapping = encoder_mappings['town']
+for i, (town, encoded) in enumerate(list(town_mapping.items())[:10]):
+    print(f"  '{town}': {encoded}")
+if len(town_mapping) > 10:
+    print(f"  ... and {len(town_mapping)-10} more towns")

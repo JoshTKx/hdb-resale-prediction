@@ -86,7 +86,7 @@ class HDBPricePredictor(nn.Module):
   @classmethod
   def load_model(cls, filepath, device=None):
     """Load model from checkpoint"""
-    checkpoint = torch.load(filepath, map_location=device)
+    checkpoint = torch.load(filepath, map_location=device, weights_only=False)
     config = checkpoint['model_config']
 
     model = cls(
